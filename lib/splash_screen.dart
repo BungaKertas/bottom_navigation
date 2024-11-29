@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:pembelajaran_ke_5/halaman_bottom.dart';
+import 'package:pembelajaran_ke_5/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Timer(const Duration(seconds: 3,
     ), (){
-      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const HalamanBottom(),), (route) => false,);
+      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const Loginscreen(),), (route) => false,);
     });
     super.initState();
   }
