@@ -38,7 +38,19 @@ class AuthService{
         await UserServices().dataUser(user);
         return user;
     } catch (e) {
-      throw Exception("Error: $e");
+      throw Exception("Error: $e"
+      );
+    }
+  }
+  Future <void> logout () async {
+    try {
+      // ignore: avoid_print
+      print(
+        "Logout Berhasil: ${auth.signOut()}",
+      );
+      await auth.signOut();
+    } catch (e) {
+      rethrow;
     }
   }
 }

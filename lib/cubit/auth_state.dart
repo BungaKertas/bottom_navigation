@@ -20,7 +20,7 @@ final class AuthSucces extends AuthState {
 final class AuthFailed extends AuthState {
   final String error;
 
-  const AuthFailed(this.error,);
+  const AuthFailed(this.error, {required String e});
   @override
   List<Object> get props => [error];
 }
